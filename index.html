@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Клик — Дмитрий Кондратьев, fullstack-разработчик</title>
+  <meta name="description" content="Портфолио Дмитрия Кондратьева (Клик): веб-сервисы на Laravel и PHP, интеграции с ЮKassa, Telegram-боты, парсеры, лендинги и интернет-магазины.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Клик — Дмитрий Кондратьев, fullstack-разработчик">
+  <meta property="og:description" content="Веб-сервисы, интеграции, боты, лендинги и интернет-магазины. Москва, удалённо или переезд.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="theme-color" content="#f3f2ef">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__inner">
+    <a class="logo" href="#top" aria-label="Клик, наверх">Клик</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#projects">Проекты</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero__id">
+      <div class="avatar" aria-hidden="true">К</div>
+      <div>
+        <p class="hero__name">Дмитрий Кондратьев</p>
+        <p class="muted">Клик · fullstack-разработчик</p>
+      </div>
+    </div>
+    <h1>Делаю сайты и веб&#8209;сервисы целиком: от&nbsp;макета до&nbsp;оплаты, уведомлений и&nbsp;хостинга.</h1>
+    <ul class="hero__meta">
+      <li><span>5 лет</span> в разработке</li>
+      <li><span>15+</span> сданных проектов</li>
+      <li><span>Москва</span> · удалённо или переезд</li>
+    </ul>
+    <div class="hero__cta">
+      <a class="btn btn--dark" href="https://t.me/Kuza_Adidas" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn" href="#projects">Смотреть проекты</a>
+      <a class="btn" href="portfolio-klik.pdf" download>Скачать PDF</a>
+    </div>
+  </section>
+
+  <section id="projects" class="projects wrap">
+    <div class="section-head">
+      <h2>Проекты</h2>
+      <p class="muted">Сервисы, интеграции, автоматизация и сайты для компаний</p>
+    </div>
+
+    <!-- 01 MySort -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">01</p>
+        <h3>MySort</h3>
+        <p class="project__lead">Сервис выноса мусора по подписке</p>
+        <p>Перенёс проект со старых PHP-скриптов на Laravel. В нём есть роли клиента, курьера и администратора, подписка со счётчиком выносов, три тарифа и промокоды. Оплата идёт через ЮKassa с вебхуком, вход через Яндекс ID. Ещё есть карта зоны покрытия и PWA.</p>
+        <p>Очереди и планировщик закрывают просроченные заказы и подписки, уведомления уходят в Telegram и через web-push. Работа шла в шесть этапов, к каждому написана документация.</p>
+        <p class="status status--live">Работает на хостинге с реальными заказами и курьерами, развивается</p>
+        <ul class="stack"><li>PHP 8</li><li>Laravel</li><li>MySQL</li><li>ЮKassa</li><li>Яндекс ID</li><li>PWA</li><li>Telegram</li></ul>
+        <a class="link" href="https://musort.ru/" target="_blank" rel="noopener">musort.ru ↗</a>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="mysort-1,mysort-2" aria-label="Открыть скриншоты MySort">
+          <img src="assets/img/mysort-1.webp" alt="MySort — главный экран" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 02 Smart plug -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">02</p>
+        <h3>Оплата и управление умной розеткой</h3>
+        <p class="project__lead">Массажное кресло в другом городе включается после оплаты</p>
+        <p>Клиент платит через ЮKassa, сервис включает розетку с креслом и отсчитывает оплаченное время. По его окончании питание гарантированно отключается, для этого есть три независимых способа. У сервиса есть публичное и админское API, драйверы разных розеток работают за единым интерфейсом.</p>
+        <p>Есть и упрощённая версия на Tuya Cloud API: кнопки «Включить» и «Выключить» плюс cron.</p>
+        <p class="status status--live">Выложен, платежи проходят</p>
+        <ul class="stack"><li>Laravel 13</li><li>Docker</li><li>ЮKassa</li><li>Tuya Cloud API</li><li>126 автотестов</li></ul>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="chair-1" aria-label="Открыть скриншот сервиса массажного кресла">
+          <img src="assets/img/chair-1.webp" alt="Массажное кресло — экран управления с кассы" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 03 Белый квадрат -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">03</p>
+        <h3>Белый квадрат</h3>
+        <p class="project__lead">Сайт студии дизайнерского ремонта</p>
+        <p>Крупная типографика, форма консультации и калькулятор сметы на JavaScript: выбираешь тип ремонта и площадь и сразу видишь стоимость и срок. Позже перевёл сайт на статику для Netlify, подключил формы, настроил SEO и Яндекс.Вебмастер.</p>
+        <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Netlify</li><li>SEO</li></ul>
+        <a class="link" href="https://beliy-kvadrat.ru/" target="_blank" rel="noopener">beliy-kvadrat.ru ↗</a>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="kvadrat-1,kvadrat-2" aria-label="Открыть скриншоты Белый квадрат">
+          <img src="assets/img/kvadrat-1.webp" alt="Белый квадрат — главный экран" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 04 Formul -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">04</p>
+        <h3>Formul</h3>
+        <p class="project__lead">Интернет-магазин итальянской мебели</p>
+        <p>Каталог больше чем на 500 фабрик с фильтрами и поиском. В карточках виден статус наличия, есть избранное, корзина и админка для управления товарами.</p>
+        <ul class="stack"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="formul-1,formul-2" aria-label="Открыть скриншоты Formul">
+          <img src="assets/img/formul-1.webp" alt="Formul — главный экран" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 05 Blogwave -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">05</p>
+        <h3>Blogwave</h3>
+        <p class="project__lead">Платформа технических блогов</p>
+        <p>Регистрация авторов, категории, комментарии и REST API. Бэкенд написан на PHP в ООП-стиле, данные хранятся в MySQL.</p>
+        <ul class="stack"><li>PHP</li><li>ООП</li><li>MySQL</li><li>REST API</li></ul>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="blogwave-1,blogwave-2" aria-label="Открыть скриншоты Blogwave">
+          <img src="assets/img/blogwave-1.webp" alt="Blogwave — главная страница" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 06 Парсер 2ГИС -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">06</p>
+        <h3>Парсер компаний без сайта</h3>
+        <p class="project__lead">Инструмент для поиска клиентов</p>
+        <p>Сервис на Node.js работает через официальный API 2ГИС и находит компании, у которых нет сайта. Он учитывает лимиты и квоты API, складывает лиды с e-mail и соцсетями в базу и показывает их в веб-интерфейсе.</p>
+        <p class="status">Запускался на реальных данных, найдено 220 лидов</p>
+        <ul class="stack"><li>Node.js</li><li>2ГИС API</li><li>База лидов</li><li>Веб-интерфейс</li></ul>
+      </div>
+      <figure class="project__media">
+        <div class="spec">
+          <p class="spec__title">результат</p>
+          <p class="spec__big">220</p>
+          <p class="spec__note">лидов с контактами<br>на реальных данных</p>
+        </div>
+      </figure>
+    </article>
+
+    <!-- 07 Нейросеть -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">07</p>
+        <h3>Локальная нейросеть для киберзащиты</h3>
+        <p class="project__lead">Поиск уязвимостей и справка по их устранению</p>
+        <p>Локальная модель, которую я обучаю навыкам киберзащиты и этичного хакинга. Автоматизация вокруг неё находит уязвимости и формирует справку о том, как их закрыть.</p>
+        <ul class="stack"><li>Локальная LLM</li><li>Автоматизация</li><li>Безопасность</li></ul>
+      </div>
+      <figure class="project__media">
+        <div class="spec">
+          <p class="spec__title">пайплайн</p>
+          <ol class="flow">
+            <li>сканирование</li>
+            <li>найденные уязвимости</li>
+            <li>справка по устранению</li>
+          </ol>
+        </div>
+      </figure>
+    </article>
+
+    <!-- 08 Telegram-боты -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">08</p>
+        <h3>Telegram-боты для приёма заявок</h3>
+        <p class="project__lead">Связка сайта и мессенджера</p>
+        <p>Клиент оставляет данные на сайте и переходит в бота, а владелец сразу получает уведомление о новой заявке.</p>
+        <ul class="stack"><li>Telegram Bot API</li><li>Формы на сайте</li></ul>
+      </div>
+      <figure class="project__media">
+        <div class="spec">
+          <p class="spec__title">путь заявки</p>
+          <ol class="flow">
+            <li>форма на сайте</li>
+            <li>переход в бота</li>
+            <li>уведомление владельцу</li>
+          </ol>
+        </div>
+      </figure>
+    </article>
+
+    <!-- 09 Перевод инструкции -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">09</p>
+        <h3>Автоматический перевод инструкции</h3>
+        <p class="project__lead">Около 45 страниц сканов с китайского на русский</p>
+        <p>Конвейер на Python распознаёт текст на сканах, стирает оригинал и подставляет русский перевод, сам подбирая размер шрифта под место. За четыре итерации получился готовый PDF.</p>
+        <ul class="stack"><li>Python</li><li>OCR</li><li>Обработка изображений</li><li>PDF</li></ul>
+      </div>
+      <figure class="project__media">
+        <div class="spec">
+          <p class="spec__title">итог</p>
+          <p class="spec__big">44–45</p>
+          <p class="spec__note">страниц переведено<br>за 4 итерации</p>
+        </div>
+      </figure>
+    </article>
+
+    <!-- 10 БайкалСтрой -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">10</p>
+        <h3>БайкалСтрой</h3>
+        <p class="project__lead">Дома из сибирской сосны и кедра</p>
+        <p>Полноэкранный главный экран, галерея объектов, пять этапов работы и форма расчёта.</p>
+        <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="baikal-1,baikal-2" aria-label="Открыть скриншоты БайкалСтрой">
+          <img src="assets/img/baikal-1.webp" alt="БайкалСтрой — главный экран" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+    <!-- 11 SIM Terminal -->
+    <article class="project">
+      <div class="project__text">
+        <p class="project__num">11</p>
+        <h3>SIM Terminal</h3>
+        <p class="project__lead">Тренажёр биржевого терминала</p>
+        <p>Терминал, на котором можно тренироваться торговать без реальных денег. В нём свечной график с индикаторами, скальперская лента со стаканом, панель заявок с лимитными, рыночными и стоп-заявками и история сделок с комиссией и результатом.</p>
+        <p>Рабочее пространство собирается из виджетов, есть бегущая строка котировок, индекс рынка и ускорение времени торговой сессии.</p>
+        <ul class="stack"><li>Веб-приложение</li><li>Графики</li><li>Симуляция рынка</li></ul>
+      </div>
+      <figure class="project__media">
+        <button class="shot" data-gallery="terminal-1" aria-label="Открыть скриншот SIM Terminal">
+          <img src="assets/img/terminal-1.webp" alt="SIM Terminal — скальперский режим" loading="lazy" width="1600" height="900">
+        </button>
+      </figure>
+    </article>
+
+  </section>
+
+  <section id="about" class="about wrap">
+    <div class="section-head">
+      <h2>Обо мне</h2>
+    </div>
+    <div class="about__body">
+      <p class="about__lead">Пять лет занимаюсь веб-разработкой. Делал сайты для компаний, в том числе проект, который работает с госзаказами.</p>
+      <p>Беру задачу целиком: дизайн, вёрстку, бэкенд на PHP и Laravel, оплату, ботов, деплой и поддержку после запуска. Если нужно что-то за пределами этого списка, тоже возьмусь: на этой странице есть парсер на Node.js, конвейер на Python и локальная нейросеть.</p>
+      <p>Живу в Москве. Готов к удалённой работе или переезду.</p>
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts wrap">
+    <div class="section-head">
+      <h2>Контакты</h2>
+      <p class="muted">Расскажите задачу, отвечу в течение пары часов</p>
+    </div>
+    <ul class="contacts__list">
+      <li><span class="muted">Telegram</span><a href="https://t.me/Kuza_Adidas" target="_blank" rel="noopener">@Kuza_Adidas</a></li>
+      <li><span class="muted">E-mail</span><a href="mailto:kuza.adidas@bk.ru">kuza.adidas@bk.ru</a></li>
+      <li><span class="muted">ВКонтакте</span><a href="https://vk.ru/club241566581" target="_blank" rel="noopener">Создание сайтов | Клик</a></li>
+      <li><span class="muted">GitHub</span><a href="https://github.com/kuza-adidas" target="_blank" rel="noopener">kuza-adidas</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <span>© 2026 Клик · Дмитрий Кондратьев</span>
+  <a href="#top">Наверх ↑</a>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Скриншоты проекта">
+  <button class="lightbox__close" type="button" aria-label="Закрыть">×</button>
+  <div class="lightbox__track"></div>
+</dialog>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
