@@ -30,4 +30,16 @@ PDF-версия: [portfolio-klik.pdf](portfolio-klik.pdf)
 
 ---
 
-Сайт статический (HTML, CSS, немного JS), публикуется через GitHub Pages из корня ветки `main`. PDF пересобирается скриптом `tools/make-pdf.mjs`.
+## Публикация
+
+Сайт статический (HTML, CSS, немного JS) и лежит в корне репозитория; `.nojekyll` отключает обработку Jekyll.
+
+Деплой делает workflow `.github/workflows/pages.yml` при пуше в `main` и по кнопке Run workflow. Чтобы он заработал, в **Settings → Pages → Build and deployment → Source** нужно один раз выбрать **GitHub Actions**: создать сайт Pages сам workflow не может, токену Actions это не разрешено.
+
+PDF пересобирается скриптом `tools/make-pdf.mjs`:
+
+```sh
+npm i playwright && npx playwright install chromium
+python3 -m http.server 8765 &
+node tools/make-pdf.mjs
+```
